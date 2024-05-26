@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohen Ziara</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e6e3;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #7c6498;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+            max-width: 100px; /* Logonun genişliğini ayarlayın */
+            margin-right: 40px;
+            margin-bottom: 10px;
+            
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2e3454;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 10px;
+            transition: background 0.3s, color 0.2s; /* Added missing space after comma */
+        }
+        nav a:hover {
+            background-color: #2e3454;
+            color: black;
+        }
+        .container {
+            flex: 1;
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content section {
+            width: 100%;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2e3454;
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info li {
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Untitled_logo_1_free-file.png" alt="Sule's Logo"> <!-- Logo ekledik -->
+        <h1>Welcome to Sule's Webpage</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>My name is Sule. I am 20 years old and a computer engineering student. I am passionate about technology and enjoy learning new things in the field of computer science.</p>
+                <img src="ohen.jpg" alt="Photo of Sule">
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>You can reach me at:</p>
+                <ul>
+                    <li>Email: <a href="mailto:suuleyildirim@gmail.com">suuleyildirim@gmail.com</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/suleo_o/">suleo_o</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/suleyildirim24" target="_blank">linkedin.com/in/sule</a></li> <!-- Added missing https:// -->
+                </ul>
+                <img src="ohen3.jpg" alt="Contact Image">
+            </section>
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Welcome to my blog! Here, I share my thoughts and experiences in the field of computer engineering. Stay tuned for updates!</p>
+                <img src="ohen2.jpg" alt="Blog Image">
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sule. All rights reserved.</p>
+    </footer>
+</body>
+</html>
