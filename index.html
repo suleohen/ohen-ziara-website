@@ -54,6 +54,17 @@
             margin: auto;
             padding: 20px 0;
         }
+         .game-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+        }
         .content {
             display: flex;
             flex-direction: column;
@@ -133,6 +144,44 @@
             </section>
         </div>
     </div>
+    <div class="game-container">
+        <h1>Sayı Tahmin Oyunu</h1>
+        <p>Bilgisayarın tuttuğu sayıyı tahmin etmeye çalışın. 10 tahmin hakkınız var.</p>
+        <input type="number" id="guess" placeholder="Bir sayı girin (0-100)">
+        <button onclick="makeGuess()">Tahmin Et</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+    let generatedNumber = Math.floor(Math.random() * 101);
+    let attempts = 0;
+    const maxAttempts = 10;
+
+    function makeGuess() {
+        let guessInput = document.getElementById('guess');
+        let message = document.getElementById('message');
+        let guess = parseInt(guessInput.value);
+        attempts++;
+
+        if (guess === generatedNumber) {
+            message.textContent = `Tebrikler! Bildiniz. Doğru sayı ${generatedNumber} idi.`;
+            message.style.color = 'green';
+        } else if (attempts >= maxAttempts) {
+            message.textContent = `Maalesef bilemediniz. Doğru sayı ${generatedNumber} idi.`;
+            message.style.color = 'red';
+        } else {
+            if (guess > generatedNumber) {
+                message.textContent = 'Daha küçük bir değer giriniz.';
+            } else {
+                message.textContent = 'Daha büyük bir değer giriniz.';
+            }
+            message.style.color = 'orange';
+        }
+        
+        guessInput.value = '';
+        guessInput.focus();
+    }
+    </script>
     <footer>
         <p>&copy; 2024 Sule. All rights reserved.</p>
     </footer>
